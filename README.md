@@ -1,349 +1,240 @@
-Real-Time WLAN Channel Utilization Monitor
+<p align="center">
+  <img src="https://img.icons8.com/?size=512&id=55494&format=png" width="20%" alt="WIFI-CHANNEL-UTILISATION-logo">
+</p>
+<p align="center">
+    <h1 align="center">WIFI-CHANNEL-UTILISATION</h1>
+</p>
+<p align="center">
+    <em><code>❯ Developer: Ifrahuddin Azmi</code></em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/github/license/ifrahazmi/wifi-channel-utilisation?style=flat&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/ifrahazmi/wifi-channel-utilisation?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/ifrahazmi/wifi-channel-utilisation?style=flat&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/ifrahazmi/wifi-channel-utilisation?style=flat&color=0080ff" alt="repo-language-count">
+</p>
+<p align="center">
+		<em>Built with the tools and technologies:</em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=Python&logoColor=white" alt="Python3">
+</p>
 
-Table of Contents
-Overview
-Features
-Prerequisites
-Hardware Requirements
-Software Requirements
-Installation
-1. Clone the Repository
-2. Set Up Python Virtual Environment (Optional but Recommended)
-3. Install Python Dependencies
-4. Install System Dependencies
-Configuration
+<br>
+
+#####  Table of Contents
+
+- [ Overview](#-overview)
+- [ Features](#-features)
+- [ Repository Structure](#-repository-structure)
+- [ Modules](#-modules)
+- [ Getting Started](#-getting-started)
+    - [ Prerequisites](#-prerequisites)
+    - [ Installation](#-installation)
+    - [ Usage](#-usage)
+    - [ Extra Agrument](#-tests)
+- [ Project Roadmap](#-project-roadmap)
+- [ Contributing](#-contributing)
+- [ License](#-license)
+- [ Acknowledgments](#-acknowledgments)
+
+---
+
+##  Overview
+
+<code>❯ The Real-Time WLAN Channel Utilization Monitor is a powerful Python-based tool designed to monitor and visualize wireless LAN channel utilization in real-time. As wireless networks become increasingly complex and congested, understanding channel usage is critical for maintaining optimal performance and ensuring a seamless user experience. This tool plays a vital role in capturing live network packets, providing insights into how channels are being utilized at any given moment.
+</code>
+
+<code>❯ By deploying this monitor, network administrators can gain a clear view of channel occupancy, identifying potential bottlenecks and areas of interference. The real-time data collection allows users to visualize network traffic patterns, making it easier to assess performance issues and optimize channel allocation. The graphical interface presents the information in an intuitive manner, enabling quick decisions based on current network conditions.
+</code>
+
+<code>❯ One of the key features of the Real-Time WLAN Channel Utilization Monitor is its ability to capture live packets, which are then analyzed to provide detailed statistics regarding channel utilization. This includes metrics such as the number of active devices, the types of traffic being transmitted, and the overall load on each channel. By analyzing this data, users can pinpoint specific times when congestion occurs, facilitating targeted interventions to improve network performance.
+</code>
+
+<code>❯ **In summary, the Real-Time WLAN Channel Utilization Monitor is an essential tool for anyone looking to manage WLAN performance effectively. With its capability to visualize real-time utilization and capture live packet data, it empowers users to make informed decisions that enhance the overall efficiency of their wireless networks.
+</code>
+
+---
+
+##  Features
+
+The Real-Time WLAN Channel Utilization Monitor is equipped with several key features that enhance its functionality and usability for network administrators and engineers. Below are the primary features that make this tool a must-have for monitoring wireless LAN performance:
+
+#####  Live Packet Capture with Pyshark
+
+Using the powerful Pyshark library, the monitor captures live packets from the WLAN. This feature allows users to analyze traffic in real-time, providing a snapshot of the network's current state. The captured packets include essential data such as source and destination addresses, protocols used, and traffic types, ensuring comprehensive insights into network activity.
+
+#####  Real-Time Processing for Channel Utilization
+
+The tool processes the captured packets in real-time, calculating channel utilization metrics on-the-fly. This dynamic processing enables users to observe how much bandwidth is being consumed at any given moment, facilitating prompt responses to network issues. By keeping track of channel occupancy, users can identify periods of congestion and adjust configurations as necessary.
+
+#####  Dynamic Visualization with Matplotlib
+
+Data visualization plays a crucial role in network monitoring. The Real-Time WLAN Channel Utilization Monitor leverages Matplotlib to create dynamic graphical representations of channel utilization. These visualizations update in real-time, allowing users to quickly interpret data trends and make informed decisions. The graphical interface is designed to be intuitive, making it easy for users to spot anomalies and inefficiencies.
+
+#####  User-Friendly Command-Line Interface
+
+The tool features a user-friendly command-line interface (CLI) that simplifies interaction with the monitor. Users can easily start and stop monitoring sessions, view real-time statistics, and access historical data through straightforward commands. This CLI design caters to both novice and experienced users, ensuring that everyone can utilize the monitor effectively.
+
+#####  Alert Mechanisms for Inactivity
+
+To enhance network management, the monitor includes alert mechanisms that notify users of inactivity or other critical events. These alerts can be configured to trigger notifications when channel utilization drops below a certain threshold or when no traffic is detected for an extended period. This feature helps ensure that network administrators can take immediate action to address potential issues before they escalate
+
+---
+
+##  Repository Structure
+
+```sh
+└── wifi-channel-utilisation/
+    ├── LICENSE
+    ├── Live_Channel_Utilization.py
+    └── README.md
+```
+
+---
+
+##  Modules
+
+<details closed><summary>.</summary>
+
+| File | Summary |
+| --- | --- |
+| [Live_Channel_Utilization.py](https://github.com/ifrahazmi/wifi-channel-utilisation/blob/main/Live_Channel_Utilization.py) | <code>❯ Real-Time WLAN Channel Utilization Monitor</code> |
+
+</details>
+
+---
+
+##  Getting Started
+
+###  Prerequisites
+
+**Python**: `version 3.10.12 or above`
+
+###  Installation
+
+Build the project from source:
+
+1. Clone the wifi-channel-utilisation repository:
+```sh
+❯ git clone https://github.com/ifrahazmi/wifi-channel-utilisation
+```
+
+2. Navigate to the project directory:
+```sh
+❯ cd wifi-channel-utilisation
+```
+
+3. Install the required python dependencies:
+```sh
+❯ pip install pyshark matplotlib
+```
+
+4. Install the tshark dependencies:
+```sh
+❯ sudo apt-get update
+❯ sudo apt-get install tshark
+```
+
+###  Usage
+
+To run the project, execute the following command:
+
 1. Enable Monitor Mode on Wireless Interface
-2. Verify TShark Installation
-Usage
-Command-Line Arguments
-Running the Script
-Examples
-Understanding the Output
-Troubleshooting
-Contributing
-License
-Acknowledgements
-Overview
-The Real-Time WLAN Channel Utilization Monitor is a Python-based tool designed to monitor and visualize wireless LAN (WLAN) channel utilization in real-time. By capturing live network packets, processing them, and displaying utilization metrics, this tool aids network administrators and enthusiasts in assessing channel performance and identifying potential issues.
-
-Features
-Live Packet Capture: Utilizes pyshark to capture live packets from a specified wireless interface in monitor mode.
-Real-Time Processing: Processes captured packets to calculate channel utilization over configurable time intervals.
-Dynamic Visualization: Displays channel utilization percentages on an animated matplotlib plot, updating in real-time.
-User-Friendly Interface: Accepts command-line arguments for easy configuration of interface, interval duration, and display settings.
-Alerts on Inactivity: Notifies users if no packets are received for a specified duration, indicating potential issues with the sniffer setup.
-Prerequisites
-Hardware Requirements
-Wireless Network Interface Card (NIC): A compatible wireless NIC that supports monitor mode. Ensure your NIC can capture the necessary wireless frames.
-Supported Operating System: Primarily tested on Linux and macOS. Some functionalities might be limited or require additional configuration on Windows.
-Software Requirements
-Python: Version 3.6 or later.
-TShark: Command-line version of Wireshark for packet capturing.
-Installation
-1. Clone the Repository
-First, clone the repository to your local machine:
-
-bash
-Copy code
-git clone https://github.com/yourusername/wlan-channel-utilization-monitor.git
-cd wlan-channel-utilization-monitor
-Replace yourusername and the repository URL with your actual GitHub username and repository link if applicable.
-
-2. Set Up Python Virtual Environment (Optional but Recommended)
-Using a virtual environment ensures that project dependencies are isolated from other Python projects.
-
-bash
-Copy code
-python3 -m venv venv
-Activate the virtual environment:
-
-macOS/Linux:
-
-bash
-Copy code
-source venv/bin/activate
-Windows:
-
-bash
-Copy code
-venv\Scripts\activate
-3. Install Python Dependencies
-With the virtual environment activated, install the required Python modules:
-
-bash
-Copy code
-pip install -r requirements.txt
-If you don't have a requirements.txt, you can install the necessary packages directly:
-
-bash
-Copy code
-pip install pyshark matplotlib
-4. Install System Dependencies
-a. Install TShark (Wireshark)
-pyshark relies on TShark for packet capturing. Ensure TShark is installed on your system.
-
-Ubuntu/Debian:
-
-bash
-Copy code
-sudo apt-get update
-sudo apt-get install tshark
-During installation, you might be prompted to allow non-superusers to capture packets. Select "Yes" to proceed.
-
-macOS (Using Homebrew):
-
-bash
-Copy code
-brew install wireshark
-During installation, you may be prompted to allow non-superusers to capture packets. Follow the on-screen instructions.
-
-Windows:
-
-Download Wireshark:
-Visit the official Wireshark download page and download the installer for Windows.
-
-Install Wireshark:
-Run the installer and ensure that the TShark component is selected. Follow the on-screen instructions.
-
-Add TShark to PATH:
-During installation, opt to add TShark to your system's PATH. If not done automatically, manually add the TShark installation directory (e.g., C:\Program Files\Wireshark) to your PATH environment variable.
-
-b. Verify TShark Installation
-After installation, verify that TShark is correctly installed and accessible:
-
-bash
-Copy code
-tshark --version
-You should see version information displayed. If not, ensure that TShark is installed and added to your system's PATH.
-
-Configuration
-1. Enable Monitor Mode on Wireless Interface
-Before running the script, ensure your wireless interface is set to monitor mode. The method to enable monitor mode varies based on the operating system and specific wireless hardware.
 
 Linux:
-Use airmon-ng to enable monitor mode.
+  Use airmon-ng to enable monitor mode.
 
-Install aircrack-ng:
+1.1 Install aircrack-ng:
+```sh
+❯sudo apt-get install aircrack-ng
+```
 
-bash
-Copy code
-sudo apt-get install aircrack-ng
-Enable Monitor Mode:
+1.2 Enable Monitor Mode in Specific Channel:
+```sh
+❯sudo airmon-ng start <wireless interface> <channel_number>
+```
 
-bash
-Copy code
-sudo airmon-ng start wlan0
-Replace wlan0 with your actual wireless interface name.
+1.3 Run The Script
 
-Verify Mode:
+```sh
+❯ sudo python3 Live_Channel_Utilization.py -i <wireless interface>
+```
 
-bash
-Copy code
-iwconfig
-Ensure that the interface is in monitor mode.
+###  Extra Agrument
 
-macOS:
-List Interfaces:
+Execute the following command as per need:
 
-bash
-Copy code
-/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
-Enable Monitor Mode:
+```sh
+❯ sudo python3 Live_Channel_Utilization.py -i <wireless interface> -d <interval duration> -m <max points on garph>
+```
+ - -i --interface  Wireless interface in monitor mode
+ - -d --duration   Interval duration in seconds
+ - -m --max_points Maximum number of data points to display (0 for unlimited)
 
-macOS requires different tools or commands to enable monitor mode. One common method is using airport utility:
+---
 
-bash
-Copy code
-sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport en0 sniff 6
-Replace en0 with your actual wireless interface and 6 with the desired channel.
+##  Project Roadmap
 
-Windows:
-Enabling monitor mode on Windows is more complex and may not be supported on all hardware. Ensure your wireless card supports monitor mode and consider using specialized drivers or tools.
+- [X] **`Task 1`**: <strike>Implement basic features.</strike>
+- [ ] **`Task 2`**: Implement for multiple channel.
+- [ ] **`Task 3`**: Implement save pcap file parallel.
 
-2. Verify TShark Installation
-Ensure that TShark is accessible and functioning correctly:
+---
 
-bash
-Copy code
-tshark --version
-If TShark is not found, revisit the installation steps to ensure it's properly installed and added to your system's PATH.
+##  Contributing
 
-Usage
-Command-Line Arguments
-The script accepts several command-line arguments to customize its behavior:
+Contributions are welcome! Here are several ways you can contribute:
 
--i, --interface (Required):
-Description: Wireless interface in monitor mode.
-Example: wlan0mon, wlxf0a731becd1d
-Usage: -i wlan0mon or --interface wlxf0a731becd1d
+- **[Report Issues](https://github.com/ifrahazmi/wifi-channel-utilisation/issues)**: Submit bugs found or log feature requests for the `wifi-channel-utilisation` project.
+- **[Submit Pull Requests](https://github.com/ifrahazmi/wifi-channel-utilisation/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **[Join the Discussions](https://github.com/ifrahazmi/wifi-channel-utilisation/discussions)**: Share your insights, provide feedback, or ask questions.
 
--d, --duration (Optional):
-Description: Interval duration in seconds for calculating utilization.
-Default: 5 seconds
-Usage: -d 10 or --duration 10
+<details closed>
+<summary>Contributing Guidelines</summary>
 
--m, --max_points (Optional):
-Description: Maximum number of data points to display on the plot.
-Default: 0 (unlimited)
-Usage: -m 100 or --max_points 100
+1. **Fork the Repository**: Start by forking the project repository to your github account.
+2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
+   ```sh
+   git clone https://github.com/ifrahazmi/wifi-channel-utilisation
+   ```
+3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+   ```sh
+   git checkout -b new-feature-x
+   ```
+4. **Make Your Changes**: Develop and test your changes locally.
+5. **Commit Your Changes**: Commit with a clear message describing your updates.
+   ```sh
+   git commit -m 'Implemented new feature x.'
+   ```
+6. **Push to github**: Push the changes to your forked repository.
+   ```sh
+   git push origin new-feature-x
+   ```
+7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
+8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
+</details>
 
--h, --help:
-Description: Show help message and exit.
+<details closed>
+<summary>Contributor Graph</summary>
+<br>
+<p align="left">
+   <a href="https://github.com{/ifrahazmi/wifi-channel-utilisation/}graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=ifrahazmi/wifi-channel-utilisation">
+   </a>
+</p>
+</details>
 
-Running the Script
-Activate Virtual Environment (If Used):
+---
 
-bash
-Copy code
-source venv/bin/activate  # macOS/Linux
-venv\Scripts\activate     # Windows
-Execute the Script:
+##  License
 
-bash
-Copy code
-python wlan_utilization_monitor.py -i <interface> -d <duration> -m <max_points>
-Replace <interface>, <duration>, and <max_points> with your desired values.
+This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
-Examples
-Basic Usage with Default Settings:
+---
 
-Monitor wlan0mon interface with a 5-second interval and unlimited data points.
+##  Acknowledgments
 
-bash
-Copy code
-python wlan_utilization_monitor.py -i wlan0mon
-Custom Interval Duration:
+- List any resources, contributors, inspiration, etc. here.
 
-Monitor wlan0mon with a 10-second interval.
-
-bash
-Copy code
-python wlan_utilization_monitor.py -i wlan0mon -d 10
-Limited Data Points on Plot:
-
-Display only the last 100 data points on the plot.
-
-bash
-Copy code
-python wlan_utilization_monitor.py -i wlan0mon -m 100
-Full Customization:
-
-bash
-Copy code
-python wlan_utilization_monitor.py -i wlxf0a731becd1d -d 15 -m 200
-Understanding the Output
-Upon running the script, an animated matplotlib plot will appear displaying the real-time channel utilization. Additionally, an information box on the plot provides the following details:
-
-Channel: Current channel number being monitored.
-Packets Processed: Total number of packets processed since the start of the script.
-Current Utilization: Latest channel utilization percentage.
-Current Time: Timestamp of the latest update.
-Plot Features:
-
-X-Axis: Time in seconds since the script started.
-Y-Axis: Channel Utilization Percentage (0% - 100%).
-Dynamic Updates: The plot updates every second, reflecting the latest utilization data.
-Alert Mechanism:
-
-If no packets are received for 10 seconds, the script will print a warning message:
-
-yaml
-Copy code
-No packets received for 10 seconds. The sniffer device might not be in monitor mode correctly.
-The script will then terminate gracefully.
-
-Troubleshooting
-Common Issues and Solutions
-TShark Not Found or pyshark Errors:
-
-Symptom:
-Errors related to TShark not being found or pyshark failing to initialize.
-
-Solution:
-Ensure TShark is installed and added to your system's PATH. Verify by running tshark --version. If TShark is installed in a non-standard location, specify its path in the script:
-
-python
-Copy code
-capture = pyshark.LiveCapture(interface=self.interface, tshark_path='/path/to/tshark')
-Permission Denied Errors:
-
-Symptom:
-Errors indicating insufficient permissions to capture packets.
-
-Solution:
-
-Linux/macOS:
-Add your user to the wireshark group:
-
-bash
-Copy code
-sudo usermod -aG wireshark $(whoami)
-Then, log out and log back in for changes to take effect.
-
-Windows:
-Run the terminal or IDE with administrative privileges.
-
-No Packets Captured:
-
-Symptom:
-The script runs but no data is displayed or utilization remains at 0%.
-
-Solution:
-
-Ensure the wireless interface is in monitor mode.
-Verify that there is active wireless traffic.
-Check for hardware compatibility and driver support.
-Ensure TShark has the necessary permissions to capture packets.
-Missing Packet Attributes (e.g., wlan_radio.duration):
-
-Symptom:
-Errors or zero values when accessing certain packet attributes.
-
-Solution:
-
-Not all wireless interfaces or drivers provide complete metadata. Consider updating drivers or using a different interface.
-Modify the script to handle missing attributes gracefully.
-High Memory Usage Over Time:
-
-Symptom:
-The script consumes increasing amounts of memory during prolonged use.
-
-Solution:
-
-Limit the number of data points using the --max_points argument.
-Implement data persistence (e.g., logging to a file) and periodically clear in-memory data structures.
-Contributing
-Contributions are welcome! If you encounter issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
-
-Steps to Contribute:
-
-Fork the Repository
-
-Create a Feature Branch
-
-bash
-Copy code
-git checkout -b feature/YourFeature
-Commit Your Changes
-
-bash
-Copy code
-git commit -m "Add your message here"
-Push to the Branch
-
-bash
-Copy code
-git push origin feature/YourFeature
-Open a Pull Request
-
-License
-This project is licensed under the MIT License.
-
-Acknowledgements
-PyShark: Python wrapper for TShark.
-Matplotlib: Comprehensive library for creating static, animated, and interactive visualizations in Python.
-Wireshark: Network protocol analyzer used for capturing and analyzing packets.
-Contact
-For any questions or support, please contact your.email@example.com.
-
-Happy Monitoring! 🚀
+---
