@@ -24,19 +24,19 @@
 
 #####  Table of Contents
 
-- [ Overview](#-overview)
-- [ Features](#-features)
-- [ Repository Structure](#-repository-structure)
-- [ Modules](#-modules)
-- [ Getting Started](#-getting-started)
-    - [ Prerequisites](#-prerequisites)
-    - [ Installation](#-installation)
-    - [ Usage](#-usage)
-    - [ Extra Agrument](#-tests)
-- [ Project Roadmap](#-project-roadmap)
-- [ Contributing](#-contributing)
-- [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
+- [ Overview](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#overview)
+- [ Features](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#features)
+- [ Repository Structure](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#repository-structure)
+- [ Modules](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#modules)
+- [ Getting Started](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#getting-started)
+    - [ Prerequisites](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#prerequisites)
+    - [ Installation](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#installation)
+    - [ Usage](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#usage)
+    - [ Extra Agrument](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#extra-agrument)
+- [ Project Roadmap](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#project-roadmap)
+- [ Contributing](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#contributing)
+- [ License](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#license)
+- [ Acknowledgments](https://github.com/ifrahazmi/wifi-channel-utilisation/tree/main?tab=readme-ov-file#acknowledgments)
 
 ---
 
@@ -229,7 +229,7 @@ Contributions are welcome! Here are several ways you can contribute:
 
 ##  License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+This project is protected under the [MIT LICENSE](https://opensource.org/license/mit) License. For more details, refer to the [LICENSE](https://github.com/ifrahazmi/wifi-channel-utilisation/blob/main/LICENSE) file.
 
 ---
 
